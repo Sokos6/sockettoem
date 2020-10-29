@@ -11,6 +11,8 @@ function App() {
     socket.on('FromAPI', data => {
       setResponse(data);
     });
+
+    return () => socket.disconnect();
   }, []);
 
   return (
